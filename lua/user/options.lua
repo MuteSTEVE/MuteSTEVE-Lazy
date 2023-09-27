@@ -23,7 +23,7 @@ local options = {
 	signcolumn = "yes",
 	showmode = false,
 	errorbells = false,
-	wrap = false,
+	wrap = true,
 	cursorline = true,
 	fileencoding = "utf-8",
 
