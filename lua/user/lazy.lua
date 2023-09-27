@@ -17,18 +17,40 @@ require("lazy").setup({
   -- colorscheme
   'navarasu/onedark.nvim',
 
-  -- telescope
+  -- telescope, undotree
   {
     'nvim-telescope/telescope.nvim',
-    dependencies = { 'nvim-lua/plenary.nvim' }
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'debugloop/telescope-undo.nvim'
+    }
   },
 
   -- treesitter
   {
     'nvim-treesitter/nvim-treesitter', 
-    'windwp/nvim-ts-autotag',
-    'HiPhish/nvim-ts-rainbow2',
+    dependencies = {
+      'windwp/nvim-ts-autotag',
+      'HiPhish/nvim-ts-rainbow2',
+    },
     build = ':TSUpdate'
-  }
+  },
+
+  -- Completion
+  {
+    -- cmp
+    {
+      'hrsh7th/nvim-cmp',
+      dependencies = {
+        'hrsh7th/cmp-buffer',
+        'hrsh7th/cmp-path',
+        'hrsh7th/cmp-cmdline',
+        'saadparwaiz1/cmp_luasnip'
+      }
+    },
+    -- Snippets
+    'L3MON4D3/LuaSnip',
+    'rafamadriz/friendly-snippets'
+  },
 
 })

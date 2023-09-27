@@ -13,6 +13,8 @@ if not actions_ok then
   return
 end
 
+telescope.load_extension('undo')
+
 telescope.setup {
   defaults = {
     mappings = {
