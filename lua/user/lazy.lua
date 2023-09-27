@@ -23,4 +23,12 @@ require("lazy").setup({
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
 
+  -- treesitter
+  {
+    'nvim-treesitter/nvim-treesitter', 
+    'windwp/nvim-ts-autotag',
+    'HiPhish/nvim-ts-rainbow2',
+    build = ':TSUpdate'
+  }
+
 })
