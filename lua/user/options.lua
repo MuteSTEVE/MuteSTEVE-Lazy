@@ -24,7 +24,6 @@ local options = {
 	showmode = false,
 	errorbells = false,
 	wrap = true,
-	cursorline = true,
 	fileencoding = "utf-8",
 
 	backup = false,
@@ -36,7 +35,6 @@ local options = {
 	updatetime = 20,
 	scrolloff = 15,
 	mouse = "a",
-	guicursor = "a:block",
 
 	title = true,
 	titlestring = "Neovim - %t",
