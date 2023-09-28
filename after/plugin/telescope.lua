@@ -14,7 +14,6 @@ if not actions_ok then
 end
 
 telescope.load_extension('undo')
-
 telescope.setup {
   defaults = {
     mappings = {
@@ -25,6 +24,7 @@ telescope.setup {
         ["<leader>ff"] = actions.close,
         ["<leader>fw"] = actions.close,
         ["<leader>b"] = actions.close,
+        ["<leader>u"] = actions.close,
         ["<esc>"] = actions.close,
       },
     },
@@ -32,5 +32,7 @@ telescope.setup {
 }
 
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fh', builtin.oldfiles, {})
 vim.keymap.set('n', '<leader>fw', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>u', "<cmd>Telescope undo<cr>", {})
 vim.keymap.set('n', '<leader>b', "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>")
