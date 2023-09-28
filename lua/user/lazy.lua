@@ -17,6 +17,12 @@ require("lazy").setup({
   -- colorscheme
   'navarasu/onedark.nvim',
 
+  -- comment
+  'terrortylor/nvim-comment',
+
+  -- gitsigns
+  'lewis6991/gitsigns.nvim',
+
   -- telescope, undotree
   {
     'nvim-telescope/telescope.nvim',
@@ -28,10 +34,11 @@ require("lazy").setup({
 
   -- treesitter
   {
-    'nvim-treesitter/nvim-treesitter', 
+    'nvim-treesitter/nvim-treesitter',
     dependencies = {
       'windwp/nvim-ts-autotag',
       'HiPhish/nvim-ts-rainbow2',
+      'windwp/nvim-autopairs',
     },
     build = ':TSUpdate'
   },
@@ -50,9 +57,13 @@ require("lazy").setup({
           'saadparwaiz1/cmp_luasnip'
         }
       },
+      {
+        'ults-io/vscode-react-javascript-snippets',
+        build = 'yarn install --frozen-lockfile && yarn compile',
+      },
       -- Snippets
       'L3MON4D3/LuaSnip',
-      'rafamadriz/friendly-snippets'
+      'rafamadriz/friendly-snippets',
     },
     -- LSP
     {
@@ -64,5 +75,11 @@ require("lazy").setup({
       }
     }
   },
+
+  -- nvim-tree
+  {
+    'nvim-tree/nvim-tree.lua',
+    dependencies = 'kyazdani42/nvim-web-devicons'
+  }
 
 })
