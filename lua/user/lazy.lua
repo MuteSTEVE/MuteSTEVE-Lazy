@@ -83,6 +83,21 @@ require("lazy").setup({
   {
     'nvim-tree/nvim-tree.lua',
     dependencies = 'kyazdani42/nvim-web-devicons'
+  },
+
+  -- Lualne
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = 'kyazdani42/nvim-web-devicons'
+  },
+
+  -- noice.nvim
+  {
+    'folke/noice.nvim',
+    dependencies = {
+      'MunifTanjim/nui.nvim',
+      'rcarriga/nvim-notify',
+    }
   }
 
 })
