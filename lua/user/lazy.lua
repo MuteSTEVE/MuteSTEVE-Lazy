@@ -23,6 +23,9 @@ require("lazy").setup({
   -- gitsigns
   'lewis6991/gitsigns.nvim',
 
+  -- indent-blankline
+  'lukas-reineke/indent-blankline.nvim',
+
   -- telescope, undotree
   {
     'nvim-telescope/telescope.nvim',
