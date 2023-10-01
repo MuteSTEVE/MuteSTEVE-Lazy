@@ -17,7 +17,7 @@ map("n", "<leader>h", ":nohlsearch<cr>", {silent = true})
 map("n", "<leader>w", ":w<cr>", {})
 map("n", "<leader>s", ":so<cr>", {})
 map("n", "<leader>qq", ":q<cr>", {})
-map("n", "<leader>wq", ":wq<cr>", {})
+map("n", "<leader>qw", ":wq<cr>", {})
 
 -- buffer movement
 map('n', 'Z', ':bp<CR>', { noremap = true, silent = true})
