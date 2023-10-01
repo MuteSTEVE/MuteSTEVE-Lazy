@@ -19,7 +19,7 @@ require("lazy").setup({
 
   'terrortylor/nvim-comment',
   'lewis6991/gitsigns.nvim',
-  'lukas-reineke/indent-blankline.nvim',
+  -- 'lukas-reineke/indent-blankline.nvim',
   'yamatsum/nvim-cursorline',
   'akinsho/toggleterm.nvim',
 
@@ -54,6 +54,7 @@ require("lazy").setup({
           'hrsh7th/cmp-path',
           'hrsh7th/cmp-cmdline',
           'hrsh7th/cmp-nvim-lsp',
+          'hrsh7th/cmp-nvim-lua',
           'saadparwaiz1/cmp_luasnip'
         }
       },
@@ -98,7 +99,7 @@ require("lazy").setup({
       "js",
     },
     config = function()
-      colorizer.setup()
+      require('colorizer').setup()
     end
   },
 
@@ -115,6 +116,14 @@ require("lazy").setup({
       { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
       { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
     },
+  },
+
+  -- mini
+  {
+    'echasnovski/mini.nvim',
+    config = function ()
+      require('mini.indentscope').setup()
+    end
   }
 
 })
