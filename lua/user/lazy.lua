@@ -88,15 +88,6 @@ require("lazy").setup({
     dependencies = 'kyazdani42/nvim-web-devicons'
   },
 
-  -- noice.nvim
-  {
-    'folke/noice.nvim',
-    dependencies = {
-      'MunifTanjim/nui.nvim',
-      'rcarriga/nvim-notify',
-    }
-  },
-
   -- Colorizer
   {
     'norcalli/nvim-colorizer.lua',

@@ -3,11 +3,6 @@ if not lualine_ok then
   return
 end
 
-local noice_ok, noice = pcall(require, 'noice')
-if not noice_ok then
-  return
-end
-
 -- cool function for progress
 local progress_bar = function()
   local current_line = vim.fn.line(".")
@@ -46,11 +41,7 @@ lualine.setup {
     lualine_a = {'filename',},
     lualine_b = {'branch', 'diff', 'diagnostics'},
     lualine_c = {},
-    lualine_x = {{
-      noice.api.status.search.get,
-      cond = noice.api.status.search.has,
-      color = { fg = "#ff9e64" },
-    },
+    lualine_x = {
       'encoding',
       'fileformat',
       'filetype',
