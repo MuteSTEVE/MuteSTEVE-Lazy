@@ -23,12 +23,11 @@ require("lazy").setup({
   'yamatsum/nvim-cursorline',
   'akinsho/toggleterm.nvim',
 
-  -- telescope, undotree
+  -- telescope
   {
     'nvim-telescope/telescope.nvim',
     dependencies = {
       'nvim-lua/plenary.nvim',
-      'debugloop/telescope-undo.nvim'
     }
   },
 
@@ -55,24 +54,28 @@ require("lazy").setup({
           'hrsh7th/cmp-cmdline',
           'hrsh7th/cmp-nvim-lsp',
           'hrsh7th/cmp-nvim-lua',
-          'saadparwaiz1/cmp_luasnip'
+          'saadparwaiz1/cmp_luasnip',
         }
-      },
-      {
-        'ults-io/vscode-react-javascript-snippets',
-        build = 'yarn install --frozen-lockfile && yarn compile',
       },
       -- Snippets
       'L3MON4D3/LuaSnip',
       'rafamadriz/friendly-snippets',
+      {
+        'ults-io/vscode-react-javascript-snippets',
+        build = 'yarn install --frozen-lockfile && yarn compile',
+      },
     },
     -- LSP
     {
       'neovim/nvim-lspconfig',
       dependencies = {
-        'williamboman/mason.nvim',
-        'williamboman/mason-lspconfig.nvim',
         'jose-elias-alvarez/null-ls.nvim'
+      },
+      {
+        'williamboman/mason.nvim',
+        dependencies = {
+          'williamboman/mason-lspconfig.nvim',
+        }
       }
     }
   },
@@ -124,6 +127,6 @@ require("lazy").setup({
     config = function ()
       require('mini.indentscope').setup()
     end
-  }
+  },
 
 })

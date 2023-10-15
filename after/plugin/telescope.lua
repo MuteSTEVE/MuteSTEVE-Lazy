@@ -8,12 +8,11 @@ if not actions_ok then
   return
 end
 
-local builtin, builtin = pcall(require, 'telescope.builtin')
-if not actions_ok then
+local builtin_ok, builtin = pcall(require, 'telescope.builtin')
+if not builtin_ok then
   return
 end
 
-telescope.load_extension('undo')
 telescope.setup {
   defaults = {
     mappings = {

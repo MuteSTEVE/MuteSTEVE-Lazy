@@ -66,6 +66,5 @@ nvim_tree.setup ({
 
 vim.g.nvim_tree_width = 25
 vim.g.nvim_tree_gitignore = 1
-vim.g.nvim_tree_indent_markers = 1
 
 vim.keymap.set('n', '<leader>n', ':NvimTreeFindFileToggle<CR>', { silent = true })

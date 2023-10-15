@@ -47,7 +47,7 @@ lualine.setup {
       'filetype',
     },
     lualine_y = {'progress'},
-    lualine_z = {'location', progress_bar}
+    lualine_z = {progress_bar}
   },
   inactive_sections = {
     lualine_a = {},
