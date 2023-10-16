@@ -3,6 +3,11 @@ if not cmp_status_ok then
   return
 end
 
+local dict_ok, dict = pcall(require, "cmp_dictionary")
+if not dict_ok then
+  return
+end
+
 local snip_status_ok, luasnip = pcall(require, "luasnip")
 if not snip_status_ok then
   return
@@ -17,31 +22,31 @@ end
 
 local kind_icons = {
   Text = "󰉿",
-	Method = "󰆧",
-	Function = "󰊕",
-	Constructor = "",
-  Field = " ",
-	Variable = "󰀫",
+  Method = "",
+  Function = "",
+	Constructor = "",
+  Field = "",
+	Variable = "",
 	Class = "󰠱",
 	Interface = "",
-	Module = "",
-	Property = "󰜢",
-	Unit = "󰑭",
-	Value = "󰎠",
-	Enum = "",
-	Keyword = "󰌋",
-  Snippet = "",
+	Module = "",
+	Property = "",
+	Unit = "",
+	Value = "",
+	Enum = "",
+	Keyword = "󰌆",
+  Snippet = "󰆐",
 	Color = "󰏘",
-	File = "󰈙",
+	File = "",
   Reference = "",
 	Folder = "󰉋",
 	EnumMember = "",
 	Constant = "󰏿",
-  Struct = "",
+  Struct = "",
 	Event = "",
 	Operator = "󰆕",
   TypeParameter = " ",
-	Misc = " ",
+	Misc = "",
 }
 -- find more here: https://www.nerdfonts.com/cheat-sheet
 
@@ -114,6 +119,8 @@ cmp.setup {
     { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
+    { name = "cmdline" },
+    { name = "dictionary" },
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
@@ -151,6 +158,25 @@ cmp.setup.cmdline(':', {
       }
     }
   })
+})
+
+dict.setup({
+  -- The following are default values.
+  exact = 2,
+  first_case_insensitive = false,
+  document = false,
+  document_command = "wn %s -over",
+  sqlite = false,
+  max_items = -1,
+  capacity = 5,
+  debug = false,
+})
+
+dict.switcher({
+  spelllang = {
+    en = "~/.config/nvim/dict/english.dict",
+    id = "~/.config/nvim/dict/indonesia.dict"
+  },
 })
 
 vim.cmd("autocmd ColorScheme * highlight Pmenu guibg=NONE")

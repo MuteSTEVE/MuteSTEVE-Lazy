@@ -55,6 +55,7 @@ require("lazy").setup({
           'hrsh7th/cmp-nvim-lsp',
           'hrsh7th/cmp-nvim-lua',
           'saadparwaiz1/cmp_luasnip',
+          'uga-rosa/cmp-dictionary',
         }
       },
       -- Snippets
@@ -86,7 +87,7 @@ require("lazy").setup({
     dependencies = 'kyazdani42/nvim-web-devicons'
   },
 
-  -- Lualne
+  -- Lualine
   {
     'nvim-lualine/lualine.nvim',
     dependencies = 'kyazdani42/nvim-web-devicons'
