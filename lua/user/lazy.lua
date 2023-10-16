@@ -77,7 +77,8 @@ require("lazy").setup({
         dependencies = {
           'williamboman/mason-lspconfig.nvim',
         }
-      }
+      },
+      'kkharji/lspsaga.nvim',
     }
   },
 
