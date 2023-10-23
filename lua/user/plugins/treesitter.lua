@@ -9,7 +9,7 @@ if not rainbow_ok then
 end
 
 treesitter.setup({
-  ensure_installed = { "bash", "c", "python", "html", "php", "phpdoc", "css", "javascript", "lua", "json", "vim" },
+  ensure_installed = { "java", "bash", "c", "python", "html", "php", "phpdoc", "css", "javascript", "lua", "json", "vim" },
   sync_install = true,
   highlight = {
     enable = true,

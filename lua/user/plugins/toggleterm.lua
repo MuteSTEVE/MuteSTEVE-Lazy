@@ -17,9 +17,3 @@ toggleterm.setup({
 vim.cmd([[
   command! -nargs=0 Ncmpcpp lua require('toggleterm').exec('ncmpcpp ; exit', 1)
 ]])
-
-vim.keymap.set('n', '<leader>tv', ":ToggleTerm direction=vertical size=50<cr>", {silent = true})
-vim.keymap.set('n', '<leader>th', ":ToggleTerm direction=horizontal size=12<cr>", {silent = true})
-vim.keymap.set('n', '<leader>tf', ":ToggleTerm direction=float<cr>", {silent = true})
-vim.keymap.set('n', '<leader>tt', ":ToggleTerm direction=tab<cr>", {silent = true})
-vim.keymap.set('n', '<leader>m', ":Ncmpcpp<cr>", {silent = true})

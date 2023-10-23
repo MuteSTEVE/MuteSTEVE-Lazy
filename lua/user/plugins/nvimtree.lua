@@ -37,7 +37,7 @@ nvim_tree.setup ({
       show = {
         file = true,
         folder = true,
-        folder_arrow = true,
+        folder_arrow = false,
         git = true,
       },
       glyphs = {
@@ -66,5 +66,3 @@ nvim_tree.setup ({
 
 vim.g.nvim_tree_width = 25
 vim.g.nvim_tree_gitignore = 1
-
-vim.keymap.set('n', '<leader>n', ':NvimTreeFindFileToggle<CR>', { silent = true })

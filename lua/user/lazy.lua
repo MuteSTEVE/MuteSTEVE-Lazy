@@ -131,4 +131,9 @@ require("lazy").setup({
     end
   },
 
+  -- which-key
+  {
+    'folke/which-key.nvim',
+  }
+
 })
