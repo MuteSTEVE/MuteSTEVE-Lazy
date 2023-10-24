@@ -19,7 +19,6 @@ require("lazy").setup({
 
   'terrortylor/nvim-comment',
   'lewis6991/gitsigns.nvim',
-  -- 'lukas-reineke/indent-blankline.nvim',
   'yamatsum/nvim-cursorline',
   'akinsho/toggleterm.nvim',
 
@@ -134,6 +133,15 @@ require("lazy").setup({
   -- which-key
   {
     'folke/which-key.nvim',
+  },
+
+  {
+    "jiaoshijie/undotree",
+    dependencies = "nvim-lua/plenary.nvim",
+    config = true,
+    keys = { -- load the plugin only when using it's keybinding:
+      { "<leader>u", "<cmd>lua require('undotree').toggle()<cr>" },
+    },
   }
 
 })

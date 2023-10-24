@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 toggleterm.setup({
-  size = 10,
+  size = 30,
   open_mapping = [[<c-\>]],
   shade_filetypes = {},
   shade_terminals = true,
@@ -16,4 +16,8 @@ toggleterm.setup({
 
 vim.cmd([[
   command! -nargs=0 Ncmpcpp lua require('toggleterm').exec('ncmpcpp ; exit', 1)
+]])
+
+vim.cmd([[
+  command! -nargs=0 Lazygit lua require('toggleterm').exec('lazygit ; exit', 1)
 ]])

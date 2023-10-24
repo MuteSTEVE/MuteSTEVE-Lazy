@@ -28,7 +28,7 @@ local setup = {
   -- operators = { gc = "Comments" },
   key_labels = {
     -- override the label used to display some keys. It doesn't effect WK in any other way.
-    -- For example:
+    -- For example<cmd>
     -- ["<space>"] = "SPC",
     -- ["<cr>"] = "RET",
     -- ["<tab>"] = "TAB",
@@ -56,7 +56,7 @@ local setup = {
     align = "left", -- align columns left, center or right
   },
   ignore_missing = true, -- enable this to hide mappings for which you didn't specify a label
-  hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ " }, -- hide mapping boilerplate
+  hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^<cmd>", "^ " }, -- hide mapping boilerplate
   show_help = true, -- show help message on the command line when the popup is visible
   triggers = "auto", -- automatically setup triggers
   -- triggers = {"<leader>"} -- or specify a list manually
@@ -79,17 +79,19 @@ local opts = {
 }
 
 local mappings = {
+  u = { "<cmd>lua require('undotree').toggle()<cr>", "Undotree" },
   I = { "<cmd>set spelllang=id<CR>", "Indonesia cmp-dictionary" },
   E = { "<cmd>set spelllang=en<CR>", "English cmp-dictionary" },
   x = { "<cmd>!chmod +x %<CR>", "Make executable"  },
-  m = { ":Ncmpcpp<cr>", "Ncmpcpp mpd" },
+  m = { "<cmd>Ncmpcpp<cr>", "Ncmpcpp mpd" },
+  g = { "<cmd>Lazygit<cr>", "Lazygit" },
   b = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Buffers",
   },
   n = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   w = { "<cmd>w!<CR>", "Save" },
-  S = {":so %<cr>", "Source the config"},
+  S = { "<cmd>so %<cr>", "Source the config" },
   q = { "<cmd>q!<CR>", "Quit" },
   c = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   h = { "<cmd>nohlsearch<CR>", "No Highlight" },
@@ -105,7 +107,7 @@ local mappings = {
       "<cmd>Telescope diagnostics<cr>",
       "Workspace Diagnostics",
     },
-    i = { ":LspInfo<cr>", "Connected Language Servers" },
+    i = { "<cmd>LspInfo<cr>", "Connected Language Servers" },
     k = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "Signature Help" },
     K = { "<cmd>Lspsaga hover_doc<cr>", "Hover Commands" },
     w = { '<cmd>lua vim.lsp.buf.add_workspace_folder()<cr>', "Add Workspace Folder" },
