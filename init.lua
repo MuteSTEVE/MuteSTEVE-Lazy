@@ -1,3 +1,3 @@
-require('user')
-
-vim.cmd('colorscheme onedark')
+require('core')
+require('plug')
+require('lsp')
