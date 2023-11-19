@@ -23,7 +23,6 @@ lualine.setup {
     disabled_filetypes = {
       'packer',
       'alpha',
-      'NvimTree',
       statusline = {},
       winbar = {},
     },

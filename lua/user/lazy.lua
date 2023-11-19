@@ -144,6 +144,7 @@ require("lazy").setup({
     },
   },
 
+
   -- nvim-ufo
   {
     'kevinhwang91/nvim-ufo',
@@ -167,6 +168,27 @@ require("lazy").setup({
         "rcarriga/nvim-dap-ui",
       },
     }
-  }
+  },
+
+  -- iron.nvim
+  {
+    "hkupty/iron.nvim",
+  },
+
+  -- Auto-save
+  {
+    "Pocco81/auto-save.nvim",
+  },
+
+  -- LazyGit
+  {
+    "kdheepak/lazygit.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    keys = {
+      { "<leader>g", "<cmd>LazyGit<cr>", desc = "LazyGit"}
+    },
+  },
 
 })

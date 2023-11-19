@@ -84,7 +84,7 @@ local mappings = {
   E = { "<cmd>set spelllang=en<CR>", "English cmp-dictionary" },
   x = { "<cmd>!chmod +x %<CR>", "Make executable"  },
   m = { "<cmd>Ncmpcpp<cr>", "Ncmpcpp mpd" },
-  g = { "<cmd>Lazygit<cr>", "Lazygit" },
+  -- g = { "<cmd>Lazygit<cr>", "Lazygit" },
   b = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Buffers",
@@ -150,6 +150,14 @@ local mappings = {
     name = "dap",
     b = { "<cmd>DapToggleBreakpoint<cr>", "Toggle dap"},
     p = { "<cmd>lua require('dap-python').test_method()<cr>"}
+  },
+
+  r = {
+    name = "run python",
+    o = { "<cmd>IronRepl<cr>", "Open IronRepl" },
+    r = { "<cmd>IronRestart<cr>", "Restart IronRepl" },
+    f = { "<cmd>IronFocus<cr>", "Iron focus" },
+    h = { "<cmd>IronHide<cr>", "Iron hide"},
   }
 }
 

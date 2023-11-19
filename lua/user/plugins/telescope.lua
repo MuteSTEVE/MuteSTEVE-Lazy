@@ -8,13 +8,10 @@ if not actions_ok then
   return
 end
 
-local builtin_ok, builtin = pcall(require, 'telescope.builtin')
-if not builtin_ok then
-  return
-end
-
 telescope.setup {
   defaults = {
+    prompt_prefix = " 󰍉 ",
+    selection_caret = "  ",
     mappings = {
       i = {
         ["<C-j>"] = actions.move_selection_next,
