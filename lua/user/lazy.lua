@@ -142,6 +142,12 @@ require("lazy").setup({
     keys = { -- load the plugin only when using it's keybinding:
       { "<leader>u", "<cmd>lua require('undotree').toggle()<cr>" },
     },
+  },
+
+  -- nvim-ufo
+  {
+    'kevinhwang91/nvim-ufo',
+    dependencies = 'kevinhwang91/promise-async'
   }
 
 })
