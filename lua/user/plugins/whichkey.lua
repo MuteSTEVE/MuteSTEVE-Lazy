@@ -145,6 +145,12 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
+
+  d = {
+    name = "dap",
+    b = { "<cmd>DapToggleBreakpoint<cr>", "Toggle dap"},
+    p = { "<cmd>lua require('dap-python').test_method()<cr>"}
+  }
 }
 
 which_key.setup(setup)
