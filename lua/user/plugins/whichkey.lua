@@ -79,6 +79,7 @@ local opts = {
 }
 
 local mappings = {
+  z = { "<cmd>ZenMode<CR>", "ZenMode"},
   u = { "<cmd>lua require('undotree').toggle()<cr>", "Undotree" },
   I = { "<cmd>set spelllang=id<CR>", "Indonesia cmp-dictionary" },
   E = { "<cmd>set spelllang=en<CR>", "English cmp-dictionary" },

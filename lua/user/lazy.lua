@@ -21,13 +21,12 @@ require("lazy").setup({
   'lewis6991/gitsigns.nvim',
   'yamatsum/nvim-cursorline',
   'akinsho/toggleterm.nvim',
+  'folke/which-key.nvim',
 
   -- telescope
   {
     'nvim-telescope/telescope.nvim',
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-    }
+    dependencies = 'nvim-lua/plenary.nvim',
   },
 
   -- treesitter
@@ -68,14 +67,10 @@ require("lazy").setup({
     -- LSP
     {
       'neovim/nvim-lspconfig',
-      dependencies = {
-        'jose-elias-alvarez/null-ls.nvim'
-      },
+      dependencies = 'jose-elias-alvarez/null-ls.nvim',
       {
         'williamboman/mason.nvim',
-        dependencies = {
-          'williamboman/mason-lspconfig.nvim',
-        }
+        dependencies = 'williamboman/mason-lspconfig.nvim',
       },
       'kkharji/lspsaga.nvim',
     }
@@ -96,12 +91,7 @@ require("lazy").setup({
   -- Colorizer
   {
     'norcalli/nvim-colorizer.lua',
-    ft = {
-      "css",
-      "html",
-      "php",
-      "js",
-    },
+    ft = { "css", "html", "php", "js", },
     config = function()
       require('colorizer').setup()
     end
@@ -111,8 +101,6 @@ require("lazy").setup({
   {
     "folke/flash.nvim",
     event = "VeryLazy",
-    opts = {},
-    -- stylua: ignore
     keys = {
       { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
       { "S", mode = { "n", "o", "x" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
@@ -130,11 +118,6 @@ require("lazy").setup({
     end
   },
 
-  -- which-key
-  {
-    'folke/which-key.nvim',
-  },
-
   {
     "jiaoshijie/undotree",
     dependencies = "nvim-lua/plenary.nvim",
@@ -144,51 +127,17 @@ require("lazy").setup({
     },
   },
 
-
   -- nvim-ufo
   {
     'kevinhwang91/nvim-ufo',
     dependencies = 'kevinhwang91/promise-async'
   },
 
-  -- nvim-dap
-  {
-    {
-      "rcarriga/nvim-dap-ui",
-      dependencies = "mfussenegger/nvim-dap",
-    },
-    {
-      "mfussenegger/nvim-dap"
-    },
-    {
-      "mfussenegger/nvim-dap-python",
-      ft = "python",
-      dependencies = {
-        "mfussenegger/nvim-dap",
-        "rcarriga/nvim-dap-ui",
-      },
-    }
-  },
-
-  -- iron.nvim
-  {
-    "hkupty/iron.nvim",
-  },
-
-  -- Auto-save
-  {
-    "Pocco81/auto-save.nvim",
-  },
-
   -- LazyGit
   {
     "kdheepak/lazygit.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-    keys = {
-      { "<leader>g", "<cmd>LazyGit<cr>", desc = "LazyGit"}
-    },
+    dependencies = "nvim-lua/plenary.nvim",
+    keys = { "<leader>g", "<cmd>LazyGit<cr>", desc = "LazyGit"}
   },
 
 })

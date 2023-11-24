@@ -14,9 +14,9 @@ toggleterm.setup({
   direction = 'float'
 })
 
-vim.keymap.set("n", "<C-f>", "<cmd>ToggleTerm direction=float<cr>")
-vim.keymap.set("n", "<C-c>", "<cmd>ToggleTerm size=15 direction=horizontal<cr>")
-vim.keymap.set("n", "<C-v>", "<cmd>ToggleTerm size=60 direction=vertical<cr>")
+vim.keymap.set("n", "<A-f>", "<cmd>ToggleTerm direction=float<cr>")
+vim.keymap.set("n", "<A-h>", "<cmd>ToggleTerm size=15 direction=horizontal<cr>")
+vim.keymap.set("n", "<A-v>", "<cmd>ToggleTerm size=60 direction=vertical<cr>")
 
 vim.cmd([[
   command! -nargs=0 Ncmpcpp lua require('toggleterm').exec('ncmpcpp ; exit', 1)

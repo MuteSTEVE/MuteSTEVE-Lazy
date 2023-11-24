@@ -1,8 +1,6 @@
-require("user.plugins.auto-save")
 require("user.plugins.autopairs")
 require("user.plugins.comment")
 require("user.plugins.gitsigns")
-require("user.plugins.iron")
 require("user.plugins.lazygit")
 require("user.plugins.lualine")
 require("user.plugins.nvimtree")

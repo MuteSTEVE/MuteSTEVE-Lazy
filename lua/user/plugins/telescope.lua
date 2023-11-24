@@ -8,6 +8,9 @@ if not actions_ok then
   return
 end
 
+telescope.load_extension("lazygit")
+vim.cmd("autocmd BufEnter * :lua require('lazygit.utils').project_root_dir()")
+
 telescope.setup {
   defaults = {
     prompt_prefix = " 󰍉 ",
